@@ -1,6 +1,8 @@
 <?php
 include('db.php');
 session_start();
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
 ?>
 
 <!DOCTYPE html>
@@ -58,18 +60,26 @@ session_start();
   <div class="navbar"><b>Waroeng</b> Nikmat</div>
 
   <div class="sidebar">
-    <a href="#">Beranda</a>
+    <a href="dashboard.php">Beranda</a>
     <a href="#">Profil</a>
     <a href="data.php">Data</a>
     <a href="logout.php">Logout</a>
   </div>
 
-  <div class="content">
-    <div class="card">
-      <h2>Selamat Datang!</h2>
-      <p>Ini adalah halaman dashboard Restoran.</p>
-    </div>
-  </div>
 
-</body>
-</html>
+<body>
+<div class="content">
+<div class="card">
+ <h1>DATA PENGGUNA</h1>
+ <hr>
+<table border=1 cellpadding=10>
+    <tr>
+        <td><b>ID</b></td>
+        <td style="width: 250px;"><b><center>USERNAME</center></b></td>
+        <td style="width: 250px;"><b><center>PASSWORD</center></b></td>
+        <td style="width: 150px;"><b><center>LEVEL</center></b></td>
+        <td style="width: 250px;"><b><center>TANGGAL BERGABUNG</center></b></td>
+        <td style="width: 250px;"><b><center>AKSI</center></b></td>
+    </tr>
+</div>
+</div>

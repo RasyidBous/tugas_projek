@@ -2,7 +2,7 @@
 include('db.php');
 session_start();
 ?>
-
+<link rel="stylesheet" href="style.css">
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,9 +30,12 @@ session_start();
       color: white;
       padding-top: 20px;
       position: fixed;
+      box-sizing: border-box;
     }
     .sidebar a {
       display: block;
+      margin-bottom: 10px;
+      border-radius: 5px;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
@@ -51,6 +54,7 @@ session_start();
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
   </style>
 </head>
 <body>
@@ -58,15 +62,15 @@ session_start();
   <div class="navbar"><b>Waroeng</b> Nikmat</div>
 
   <div class="sidebar">
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="data.php">Data</a>
-    <a href="logout.php">Logout</a>
+    <a href="#" class="option">Beranda</a>
+    <a href="#" class="option">Profil</a>
+    <a href="data.php" class="option">Data</a>
+    <a href="login.php" class="option">Logout</a>
   </div>
 
   <div class="content">
     <div class="card">
-      <h2>Selamat Datang!</h2>
+      <h2>Selamat Datang <?php echo$_SESSION['username'];?> !</h2>
       <p>Ini adalah halaman dashboard Restoran.</p>
     </div>
   </div>

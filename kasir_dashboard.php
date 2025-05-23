@@ -61,12 +61,12 @@ session_start();
     <a href="#">Beranda</a>
     <a href="#">Profil</a>
     <a href="data.php">Data</a>
-    <a href="logout.php">Logout</a>
+    <a href="login.php">Logout</a>
   </div>
 
   <div class="content">
     <div class="card">
-      <h2>Selamat Datang!</h2>
+      <h2>Selamat Datang <?php echo$_SESSION['username'];?> !</h2>
       <p>Ini adalah halaman dashboard Restoran.</p>
     </div>
   </div>
