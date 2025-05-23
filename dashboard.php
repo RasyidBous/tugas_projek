@@ -1,10 +1,6 @@
 <?php
 include('db.php');
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +66,7 @@ if (!isset($_SESSION['user_id'])) {
 
   <div class="content">
     <div class="card">
-      <h2>Selamat Datang <?php echo$_SESSION['username'];?> !</h2>
+      <h2>Selamat Datang!</h2>
       <p>Ini adalah halaman dashboard Restoran.</p>
     </div>
   </div>
